@@ -2,9 +2,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { sealSlot } from "../lib/table-key.js";
+import { openSlot } from "../lib/table-read.js";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const src = path.join(root, "lib", "default-prompt-inject.md");
+// 保留本地草稿入口；干净 checkout 使用随仓库分发的当前发布正文。
+const draft = path.join(root, "lib", "default-prompt-inject.md");
+const src = fs.existsSync(draft) ? draft : path.join(root, "lib", "default-prompt-source.md");
 const dest = path.join(root, "lib", "asset-table.js");
 
 if (!fs.existsSync(src)) {
@@ -13,6 +16,12 @@ if (!fs.existsSync(src)) {
 
 const text = fs.readFileSync(src, "utf8");
 if (!text.trim()) throw new Error("local source is empty");
+
+// 加密使用随机 IV；正文没有变化时保留发布槽，避免构建制造无意义 diff。
+if (text === openSlot()) {
+  process.stdout.write("default prompt unchanged\n");
+  process.exit(0);
+}
 
 const packed = sealSlot(text);
 const chunk = (s, n = 96) => {

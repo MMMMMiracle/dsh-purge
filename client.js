@@ -135,50 +135,11 @@ window.__ModuleLoader__.load({ id: "dsh-purge", factory: (require) => {
 			"dock.redteam": "红队模式",
 			"dock.full": "全面浏览",
 			"dock.close": "收起",
-			"dock.unauthorized": "未授权",
-			"welcome.title": "用户须知",
-			"welcome.lead": "首次安装本插件时请阅读以下说明。确认后本窗不再弹出。",
-			"welcome.warn": "本插件免费开源。任何背着作者私自售卖、付费倒卖或借本项目盈利的行为，作者将依法追究法律责任。",
-			"welcome.body": "dsh-purge 是 DeepSeek Harness 的本机网络安全红队评测与清洗插件：在受控本机环境中调整提示词与补丁、做授权范围内的演练台操作。项目免费、非营利，源码仓库：",
-			"welcome.repo": "https://github.com/YuJunZhiXue/dsh-purge",
-			"welcome.ban1": "禁止将本项目用于未授权的网络攻击、入侵、窃取数据、破坏系统或任何违法犯罪。",
-			"welcome.ban2": "禁止商业售卖、付费倒卖、黑灰产牟利，以及隐瞒作者的营利性再分发。",
-			"welcome.ban3": "使用者须自行遵守所在地法律法规与平台规范；违法后果由行为人自行承担，与作者无关。",
-			"welcome.bans": "禁止事项",
-			"welcome.check": "我已阅读并理解上述用户须知，同意合法合规使用。",
-			"welcome.ok": "我已知晓并继续",
-			"auth.title": "演练台授权确认",
-			"auth.lead": "清洗不需要这一步。第一次进入演练台，或打开全面浏览，都要先完成本窗。",
-			"auth.warn": "安全警告：演练台只用于你有权管理的本机、离线靶标，或已书面授权的演练环境。未经授权的渗透、攻击、窃取和破坏一律禁止。",
-			"auth.hint.wait": "请阅读声明。{n} 秒后才能勾选。",
-			"auth.hint.scroll": "倒计时已结束。请把声明滚到文末，再勾选。",
-			"auth.hint.check": "倒计时已结束。请勾选全部三项。",
-			"auth.check.read": "我已读完《安全与禁止违法声明》，并认可其中的全部条款。",
-			"auth.check.scope": "我确认只用在本机已授权环境、离线靶标或合规演练中。",
-			"auth.check.ban": "我确认禁止任何违法用途。未完成本授权，不得使用演练台。",
-			"auth.no": "暂不进入",
-			"auth.ok": "确认授权",
-			"auth.ok.tab": "确认授权并进入演练台",
-			"auth.ok.full": "确认授权并全面浏览",
-			"auth.ok.env": "确认授权并打开环境适配",
-			"envGate.title": "环境还没配好",
-			"envGate.lead": "红队模式发送前需要本机工具。未检测到可用环境时，先去环境适配，或确认暂不配置。",
-			"envGate.kaliHint": "检测到 Kali 时会直接用本机工具，不必填路径。没有 Kali 时，在环境适配里填写各工具路径，或选一个整包文件夹自动分配。",
-			"envGate.skip": "暂不配置",
-			"envGate.skipConfirm": "确认后这次可以继续对话。扫描和利用类技能仍会因为缺少工具而不可用，之后可以在 dsh-purge → 环境适配里补路径。",
-			"envGate.skipNo": "返回",
-			"envGate.skipYes": "确认暂不配置",
-			"envGate.go": "去环境适配",
 			"theme.aria": "外观",
 			"theme.white": "白",
 			"theme.ink": "墨",
 			"purge.title": "补丁",
 			"override.title": "提示词",
-			"own.title": "本地靶场",
-			"own.hint": "开源版攻击任务只放行本机/内网 IP。域名会先解析，解析到的每一个地址都必须是私网或回环；hosts 把 .lab 指到公网 IP 也会拦。解析失败或混有公网地址一律拦截。",
-			"own.save": "保存名单",
-			"saved.own": "已保存自己的服务器",
-			"saved.own.dropped": "已保存。有 {n} 行不是单个 IP 或主机名，已丢掉",
 			"metric.purged": "已写入",
 			"metric.purged.skip": "已写入。跳过 {n} 项，本机没有这些文件",
 			"metric.pendingShort": "待处理 {n}",
@@ -479,50 +440,11 @@ window.__ModuleLoader__.load({ id: "dsh-purge", factory: (require) => {
 			"dock.redteam": "Red team",
 			"dock.full": "Full view",
 			"dock.close": "Collapse",
-			"dock.unauthorized": "Unauthorized",
-			"welcome.title": "User notice",
-			"welcome.lead": "Please read this on first install. After you confirm, it will not appear again.",
-			"welcome.warn": "This plugin is free and open source. Anyone who sells, resells, or profits from it behind the author's back may face legal action.",
-			"welcome.body": "dsh-purge is a local DeepSeek Harness plugin for security evaluation and cleaning: adjust prompts and patches on a machine you control, and use the drill console only within authorized scope. It is free and non-profit. Repository:",
-			"welcome.repo": "https://github.com/YuJunZhiXue/dsh-purge",
-			"welcome.ban1": "Do not use this project for unauthorized attacks, intrusion, data theft, sabotage, or any illegal activity.",
-			"welcome.ban2": "Do not commercially sell, resell, or profit from gray-market use, or redistribute for profit without the author.",
-			"welcome.ban3": "You must follow local law and platform rules; illegal use is solely your responsibility.",
-			"welcome.bans": "Prohibitions",
-			"welcome.check": "I have read and understand this notice and will use the plugin lawfully.",
-			"welcome.ok": "I understand — continue",
-			"auth.title": "Drill console authorization",
-			"auth.lead": "Cleaning does not need this step. Opening Drill or Full view the first time requires this dialog.",
-			"auth.warn": "Warning: the drill console is only for hosts you manage, offline targets, or written authorized exercises. Unauthorized intrusion, attack, theft, or sabotage is forbidden.",
-			"auth.hint.wait": "Read the notice. You can check the boxes in {n}s.",
-			"auth.hint.scroll": "Countdown finished. Scroll to the end, then check the boxes.",
-			"auth.hint.check": "Countdown finished. Check all three boxes.",
-			"auth.check.read": "I have read the Safety and Anti-Abuse Notice and accept every clause.",
-			"auth.check.scope": "I will only use authorized local hosts, offline targets, or compliant exercises.",
-			"auth.check.ban": "I will not use this for any illegal purpose. Without this authorization the drill console stays closed.",
-			"auth.no": "Not now",
-			"auth.ok": "Authorize",
-			"auth.ok.tab": "Authorize and open Drill",
-			"auth.ok.full": "Authorize and open Full view",
-			"auth.ok.env": "Authorize and open Env adapt",
-			"envGate.title": "Environment is not ready",
-			"envGate.lead": "Red team mode needs local tools before you send. If none are available, open Env adapt or confirm you will continue without them.",
-			"envGate.kaliHint": "When Kali is detected, local tools are used directly and paths are optional. Otherwise set each tool path in Env adapt, or pick one toolkit folder to assign them.",
-			"envGate.skip": "Skip for now",
-			"envGate.skipConfirm": "You can keep chatting after this. Scan and exploit skills stay unavailable until the tools are installed. You can add paths later under dsh-purge → Env adapt.",
-			"envGate.skipNo": "Back",
-			"envGate.skipYes": "Continue without tools",
-			"envGate.go": "Open Env adapt",
 			"theme.aria": "Appearance",
 			"theme.white": "Light",
 			"theme.ink": "Ink",
 			"purge.title": "Patches",
 			"override.title": "Prompt",
-			"own.title": "Local lab only",
-			"own.hint": "The open-source build only allows localhost/private IPs. Domains are resolved first; every A/AAAA must be loopback or RFC1918. A hosts entry that points .lab at a public IP is blocked. Failed or mixed public answers are denied.",
-			"own.save": "Save list",
-			"saved.own": "Own servers saved",
-			"saved.own.dropped": "Saved. {n} lines were not a single IP or hostname and were dropped",
 			"metric.purged": "Written",
 			"metric.purged.skip": "Written. Skipped {n}; those files are not on this install",
 			"metric.pendingShort": "Pending {n}",
@@ -985,11 +907,6 @@ body[data-ds-dark-theme] .dshp-restart-card .dshp-btn-primary,body[data-ds-dark-
 .dshp-dock-body .rt-tab{border-radius:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:8px 9px 7px;background:transparent;font-size:14px}
 .dshp-dock-body .rt-tab.on{border-bottom-color:var(--dsw-alias-brand-primary,#6d8f78);background:transparent;font-weight:650}
 .dshp-dock-body .rt-row:hover,.dshp-dock-body .rt-item:hover,.dshp-dock-body .rt-item.on,.dshp-dock-body .rt-seg:hover,.dshp-dock-body .rt-seg.on,.dshp-dock-body .rt-vrow:hover,.dshp-dock-body .rt-score-row:hover{background:var(--rt-surf-2)!important}
-body:not([data-ds-dark-theme]) .dshp-auth-modal{background:color-mix(in srgb,var(--dsw-alias-bg-layer-1,#fffcf7) 92%,transparent);color:var(--dsw-alias-label-primary,#1a1916);border-color:color-mix(in srgb,var(--dsw-alias-border-l1,#c9c3b6) 80%,transparent);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3)}
-body:not([data-ds-dark-theme]) .dshp-auth-legal{background:color-mix(in srgb,var(--dsw-alias-bg-layer-2,#f3f0e8) 90%,transparent);color:var(--dsw-alias-label-primary,#1a1916);border-color:color-mix(in srgb,var(--dsw-alias-border-l1,#c9c3b6) 80%,transparent)}
-body:not([data-ds-dark-theme]) .dshp-auth-warn{background:color-mix(in srgb,#f5e6c8 88%,transparent);color:#6b4a10}
-body:not([data-ds-dark-theme]) .dshp-auth-ops button{border-color:var(--dsw-alias-border-l1,#c9c3b6);color:var(--dsw-alias-label-primary,#1a1916);background:color-mix(in srgb,var(--dsw-alias-bg-layer-1,#fff) 88%,transparent)}
-body:not([data-ds-dark-theme]) .dshp-auth-ops button.primary{background:var(--dsw-alias-brand-primary,#3f6b52);border-color:var(--dsw-alias-brand-primary,#3f6b52);color:#fff}
 .dshp-dock-resize,.dshp-dock-resize-l,.dshp-dock-resize-r,.dshp-dock-resize-b{position:absolute;z-index:60;pointer-events:auto;touch-action:none}
 .dshp-dock-resize{right:0;bottom:0;width:22px;height:22px;cursor:nwse-resize;background:linear-gradient(135deg,transparent 46%,color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 75%,transparent) 46%);border-radius:0 0 12px 0;opacity:.95}
 .dshp-dock-resize-l{left:-2px;top:0;bottom:0;width:10px;cursor:ew-resize;background:color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 18%,transparent)}
@@ -997,22 +914,7 @@ body:not([data-ds-dark-theme]) .dshp-auth-ops button.primary{background:var(--ds
 .dshp-dock-resize-r{right:-2px;top:0;bottom:22px;width:10px;cursor:ew-resize;background:transparent}
 .dshp-dock-resize-b{left:10px;right:22px;bottom:-2px;height:10px;cursor:ns-resize;background:transparent}
 .dshp-dock-resize-b:hover{background:color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 35%,transparent)}
-.dshp-auth-mask{position:fixed;inset:0;z-index:10100;background:rgba(0,0,0,.62);display:flex;align-items:center;justify-content:center;padding:20px;pointer-events:auto}
 .dshp-env-gate{z-index:10200}
-.dshp-auth-modal{width:min(680px,100%);max-height:min(88vh,820px);display:flex;flex-direction:column;gap:10px;padding:16px;border:1px solid var(--dsw-alias-border-l1,#333);border-radius:12px;background:var(--dsw-alias-bg-layer-1,#1a1a1a);color:var(--dsw-alias-label-primary,#eee)}
-.dshp-auth-modal h2{margin:0;font-size:16px;font-weight:600}
-.dshp-auth-warn{padding:8px 10px;border-radius:8px;background:#3a2e18;color:#f0d48a;font-size:13px}
-.dshp-auth-legal{overflow:auto;height:300px;margin:0;padding:10px 12px;border:1px solid var(--dsw-alias-border-l1,#333);border-radius:8px;background:#121212;font-size:13px;line-height:1.55}
-.dshp-auth-legal h3{margin:14px 0 4px;font-size:13px}
-.dshp-auth-legal h3:first-child{margin-top:0}
-.dshp-auth-legal p{margin:0 0 8px}
-.dshp-auth-checks{display:flex;flex-direction:column;gap:8px;font-size:13px}
-.dshp-auth-checks label{display:flex;gap:8px;align-items:flex-start}
-.dshp-auth-checks label.locked{opacity:.45}
-.dshp-auth-ops{display:flex;justify-content:flex-end;gap:8px}
-.dshp-auth-ops button,.dshp-dock-head button{appearance:none;border:1px solid var(--dsw-alias-border-l1,#444);background:transparent;color:inherit;border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit}
-.dshp-auth-ops button.primary{background:#2a4033;border-color:#8fbf9a}
-.dshp-auth-ops button:disabled{opacity:.45;cursor:default}
 .dshp-icon-btn{appearance:none;display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 10px;border:1px solid color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 45%,transparent);border-radius:8px;background:transparent;color:var(--dsw-alias-label-secondary,currentColor);cursor:pointer;font:13px/1 inherit;white-space:nowrap;flex:0 0 auto}
 .dshp-icon-btn:hover{border-color:var(--dsw-alias-brand-primary,#6dbf8c);background:color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 12%,transparent);color:var(--dsw-alias-label-primary,currentColor)}
 .dshp-icon-btn.on{border-color:var(--dsw-alias-brand-primary,#6dbf8c);color:var(--dsw-alias-brand-primary,#6dbf8c);background:color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 16%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 28%,transparent)}
@@ -1412,8 +1314,6 @@ body:not([data-ds-dark-theme]) .dshp-auth-ops button.primary{background:var(--ds
 			const [override, setOverride] = useState("");
 			const [defaultOverride, setDefaultOverride] = useState("");
 			const [overrideLoaded, setOverrideLoaded] = useState(false);
-			const [ownServers, setOwnServers] = useState("");
-			const [ownLoaded, setOwnLoaded] = useState(false);
 			const [patchBusy, setPatchBusy] = useState(false);
 			const [updateBusy, setUpdateBusy] = useState(false);
 			const [canApplyUpdate, setCanApplyUpdate] = useState(false);
@@ -1615,21 +1515,14 @@ body:not([data-ds-dark-theme]) .dshp-auth-ops button.primary{background:var(--ds
 							if (packed) setDefaultOverride(packed);
 							if (!promptSeededRef.current || !promptDirtyRef.current) {
 								promptSeededRef.current = true;
-								setOverride(shown || packed);
+								overrideRef.current = shown;
+								setOverride(shown);
 							}
 							setOverrideLoaded(true);
 						}
 						else setNotice({ kind: "error", text: tr("err.override", { error: (d && d.error) || "" }) });
 					})
 					.catch((e) => setNotice({ kind: "error", text: tr("err.override", { error: e.message }) }));
-				apiJson("/dsh-purge/own-servers")
-					.then((d) => {
-						if (d && d.ok) {
-							setOwnServers(typeof d.content === "string" ? d.content : "");
-							setOwnLoaded(true);
-						}
-					})
-					.catch(() => {});
 			}, []);
 
 			useEffect(() => {
@@ -1656,7 +1549,7 @@ body:not([data-ds-dark-theme]) .dshp-auth-ops button.primary{background:var(--ds
 					fetch("/dsh-purge/" + action, {
 						method: "POST",
 						headers: { "content-type": "application/json" },
-						body: JSON.stringify(action === "apply" ? { content: applyContent } : {}),
+						body: JSON.stringify(action === "apply" && promptDirtyRef.current ? { content: applyContent } : {}),
 					})
 						.then((r) => r.json())
 						.then((d) => {
@@ -1672,6 +1565,8 @@ body:not([data-ds-dark-theme]) .dshp-auth-ops button.primary{background:var(--ds
 							if (action === "apply") {
 								if (typeof d.defaultContent === "string") setDefaultOverride(d.defaultContent);
 								if (typeof d.override_content === "string") {
+									overrideRef.current = d.override_content;
+									promptDirtyRef.current = false;
 									setOverride(d.override_content);
 									setOverrideLoaded(true);
 								}
@@ -1779,14 +1674,12 @@ body:not([data-ds-dark-theme]) .dshp-auth-ops button.primary{background:var(--ds
 				if (!defaultOverride) return;
 				const tr = t;
 				const ticket = ++actionTicket.current;
-				overrideRef.current = defaultOverride;
-				setOverride(defaultOverride);
 				setPatchBusy(true);
 				setNotice({ kind: "idle", text: "" });
 				apiJson("/dsh-purge/override", {
 					method: "POST",
 					headers: { "content-type": "application/json" },
-					body: JSON.stringify({ content: defaultOverride }),
+					body: JSON.stringify({ action: "restore" }),
 				})
 					.then((d) => {
 						if (ticket !== actionTicket.current) return;
@@ -2035,6 +1928,7 @@ body:not([data-ds-dark-theme]) .dshp-auth-ops button.primary{background:var(--ds
 				h("textarea", {
 					className: "dshp-area",
 					ref: promptAreaRef,
+					disabled: patchBusy || !overrideLoaded,
 					value: override,
 					onChange: (e) => {
 						promptDirtyRef.current = true;
@@ -2044,14 +1938,10 @@ body:not([data-ds-dark-theme]) .dshp-auth-ops button.primary{background:var(--ds
 					spellCheck: false,
 					placeholder: "",
 				}),
-				promptBoxEmpty(override) ? h("p", {
+				promptBoxEmpty(override) && promptBoxEmpty(defaultOverride) ? h("p", {
 					className: "dshp-hint",
 					style: { margin: "8px 0 0", color: "var(--dshp-danger, #c44)", fontSize: 12 },
 				}, t("need.prompt")) : null,
-				h("div", { className: "dshp-sub" },
-					h("h4", null, t("own.title")),
-				),
-				h("p", { className: "dshp-hint", style: { margin: "8px 0 0", color: "var(--dshp-mute)", fontSize: 12 } }, t("own.hint")),
 			);
 		}
 
@@ -7152,7 +7042,7 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
     /**
      * 版本显示 + 自动更新按钮。
      *
-     * 行为：挂载时静默查一次最新版本（npm registry），有新版本就把按钮点亮成
+     * 行为：挂载时静默查一次本 fork 最新版本，有新版本就把按钮点亮成
      * 「有新版本 vX」；点击弹出确认框（当前版本 / 最新版本 / 安装位置 / 阻塞项），
      * 确认后由 host 侧执行 安装 → 重启 dsh web（页面会断开，重启后刷新即可）。
      */
@@ -7169,7 +7059,7 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
         api({ op: 'updateCheck' }).then((r) => {
           setBusy(false)
           if (!r || r.ok === false) {
-            /* 开发态或查不到 registry：只显示当前版本，不报错打扰用户 */
+            /* 开发态或查不到 GitHub：只显示当前版本，不报错打扰用户 */
             if (!silent) setErr((r && r.error) || '检查更新失败')
             api({ op: 'version' }).then((v) => { if (v && v.ok !== false) setInfo(v) }, () => {})
             return
@@ -7187,9 +7077,11 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
       const apply = () => {
         setBusy(true)
         setMsg(null)
-        api({ op: 'updateApply', target: (info && info.latest) || undefined }).then((r) => {
+        api({ op: 'updateApply', target: (info && (info.updateTarget || info.latest)) || undefined }).then((r) => {
           setBusy(false)
           if (!r || r.ok === false) { setMsg({ err: (r && r.error) || '更新失败' }); return }
+          if (r.needsFullQuit) { setMsg({ ok: '已安装 ' + (r.installed || '') + '，请完全退出桌面宿主后重新打开以完成更新。' }); return }
+          if (!r.restarting) { setMsg({ ok: '已安装 ' + (r.installed || '') + '，请手动重启当前宿主。' + (r.restartError ? ' ' + r.restartError : '') }); return }
           setMsg({ ok: '已安装 ' + (r.installed || '') + '，正在重启当前宿主…' })
           /* 重启会断开这个页面：倒计时提示用户稍后刷新 */
           setCountdown(6)
@@ -7224,7 +7116,7 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
             }, busy ? '检查中…' : '有新版本 v' + latest)
           : h('button', {
               className: 'rt-btn', disabled: busy, onClick: () => check(false),
-              title: '重新检查 npm 上的最新版本',
+              title: '重新检查 MMMMMiracle/dsh-purge 的最新版本',
             }, busy ? '检查中…' : '检查更新'),
         open
           ? h('div', { className: 'rt-modal', 'aria-hidden': 'true', onClick: () => setOpen(false) },
@@ -7233,7 +7125,7 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
                 h('div', { className: 'rt-kv' }, h('b', null, '当前版本'), h('span', null, current || '未知')),
                 h('div', { className: 'rt-kv' }, h('b', null, '最新版本'), h('span', null, latest || '未知')),
                 h('div', { className: 'rt-kv' }, h('b', null, '安装方式'),
-                  h('span', null, mode === 'dev' ? '开发态（源码软链）' : mode === 'package' ? '包安装（' + ((info.install && info.install.packageManager) || 'npm') + '）' : '未知')),
+                  h('span', null, mode === 'dev' ? '开发态（源码软链）' : mode === 'package' ? '包安装（本 fork 的 GitHub 归档）' : '未知')),
                 info && info.install && info.install.dir
                   ? h('div', { className: 'rt-kv' }, h('b', null, '安装位置'), h('span', { className: 'rt-mono' }, info.install.dir))
                   : null,
@@ -7667,81 +7559,7 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 		})();
 /* __DSH_PURGE_DRILL_END__ */
 
-		const AUTH_KEY = "dsh-purge-drill-auth";
-		const WELCOME_KEY = "dsh-purge-user-notice-v1";
-		let drillGrantGen = 0;
-		let drillGrantPosting = 0;
-		let drillGrantState = { ready: false, granted: false };
-		let drillSyncRetryTimer = null;
-		const AUTH_LEGAL_HTML = "<h3>Solemn Legal Disclaimer and Notice on Compliant Use</h3>\n    <p>You must read this notice in full before entering the drill console. This project is a non-profit open-source project that complies with national laws and regulations and with the rules of the platforms on which it is used, and is provided only for study, research, and technical reference. No entity may use this project for commercial sale, paid resale, or profit from illicit or gray-market activities.</p>\n    <p>The developers firmly oppose and prohibit all forms of illegal or criminal activity, and will never support, encourage, or assist unauthorized network attacks, exploitation, data theft, unauthorized intrusion into computer information systems, or the generation of illegal or prohibited content. Any use of this project for illegal or criminal activity is unrelated to the developers, and the perpetrator bears full legal responsibility independently in accordance with the law. The following clauses may not be circumvented under the pretext of scientific research, teaching, testing, demonstration, or internal study.</p>\n    <h3>1. This repository contains no illegal content</h3>\n    <p>The code, documentation, patches, and default prompts published by dsh-purge are not trojans, backdoors, unauthorized penetration tools, ransomware, or credential-stuffing scripts, nor are they attack payloads aimed at public networks or third-party systems. The project does not provide illegal content and does not instigate, organize, or assist in any illegal or criminal activity.</p>\n    <h3>2. Local operations do not constitute external authorization</h3>\n    <p>Applying patches, writing, rolling back, and uninstalling all take place within local files and local processes. These operations do not scan, probe, intrude into, or send attack traffic to any public host or unauthorized system, and this machine must not be used as a jump host.</p>\n    <p>If the plugin has update checks enabled, it may only access this plugin's own GitHub repository to verify the version. That access is unrelated to network attacks on third-party systems and must not be interpreted as authorization for external penetration testing.</p>\n    <h3>3. Permitted scope of use</h3>\n    <p>Use is permitted only in environments you can prove you are entitled to handle: the official Harness installed locally on a machine you administer; offline, local synthetic targets; cybersecurity exercise ranges for which the owner has issued lawful written authorization; and controlled environments in a compliant laboratory. Written authorization must correspond to specific targets, time, and scope. Entering only an organization name, or relying only on an oral statement, does not constitute authorization.</p>\n    <p>Targets without the owner's lawful written authorization, publicly reachable online systems, production services, and critical information infrastructure such as energy, transportation, water resources, finance, public services, and e-government systems must not be used as exercise targets.</p>\n    <h3>4. Laws that must be complied with, by article and paragraph</h3>\n    <p>Criminal Law of the People's Republic of China, Article 285(1): It is prohibited to violate state regulations and intrude into computer information systems in the fields of state affairs, national defense, and cutting-edge science and technology.</p>\n    <p>Article 285(2): It is prohibited to intrude into computer information systems other than those specified in the preceding paragraph, or to use other technical means to obtain data stored, processed, or transmitted in such systems, or to exercise illegal control over such systems.</p>\n    <p>Article 285(3): It is prohibited to provide programs or tools specially used for intruding into or illegally controlling computer information systems; providing programs or tools to others while knowing that they intend to intrude or illegally control is likewise prohibited.</p>\n    <p>Article 286(1): It is prohibited to delete, modify, add to, or interfere with the functions of a computer information system, causing the system to fail to operate normally.</p>\n    <p>Article 286(2): It is prohibited to delete, modify, or add to data and application programs stored, processed, or transmitted in a system.</p>\n    <p>Article 286(3): It is prohibited to intentionally create or spread destructive programs such as computer viruses that affect the normal operation of computer systems.</p>\n    <p>Article 287: It is prohibited to use computers to commit financial fraud, theft, embezzlement, misappropriation of public funds, theft of state secrets, or other crimes.</p>\n    <p>Article 287-1, paragraph 1, item (1): It is prohibited to establish websites or communication groups used for illegal or criminal activities such as fraud, teaching criminal methods, or producing or selling prohibited or controlled items.</p>\n    <p>Article 287-1, paragraph 1, item (2): It is prohibited to publish information about producing or selling drugs, firearms, obscene materials, or other prohibited or controlled items, or other illegal or criminal information.</p>\n    <p>Article 287-1, paragraph 1, item (3): It is prohibited to publish information for the purpose of committing fraud or other illegal or criminal activities.</p>\n    <p>Article 287-2: It is prohibited to knowingly provide technical support, advertising promotion, payment settlement, or other assistance to others who use information networks to commit crimes.</p>\n    <p>Article 253-1, paragraphs 1 and 3: It is prohibited to sell or provide citizens' personal information to others; it is prohibited to steal or otherwise unlawfully obtain citizens' personal information.</p>\n    <p>Cybersecurity Law of the People's Republic of China, Article 13, paragraph 2: When using networks, one must not endanger cybersecurity, and must not use networks to engage in activities that endanger national security, honor, and interests; incite subversion of state power or overthrow of the socialist system; incite secession or undermine national unity; promote terrorism or extremism; promote ethnic hatred or ethnic discrimination; spread violence or obscene and pornographic information; fabricate or spread false information to disrupt economic and social order; or infringe on the reputation, privacy, intellectual property, or other lawful rights and interests of others.</p>\n    <p>Article 14: It is prohibited to use networks to engage in activities that endanger the physical and mental health of minors.</p>\n    <p>Article 29: It is prohibited to illegally intrude into others' networks, interfere with the normal functions of others' networks, or steal network data; it is prohibited to provide programs or tools specially used for intruding into networks, interfering with the normal functions of networks and protective measures, or stealing network data; when knowing that others are engaged in activities endangering cybersecurity, it is prohibited to provide them with technical support, advertising promotion, payment settlement, or other assistance.</p>\n    <p>Article 33: Critical information infrastructure in public communications and information services, energy, transportation, water resources, finance, public services, and e-government is subject to priority protection. Without lawful authorization, no one may intrude into, interfere with, or destroy it.</p>\n    <p>Article 46: It is prohibited to steal or otherwise unlawfully obtain personal information, and it is prohibited to unlawfully sell or unlawfully provide personal information to others.</p>\n    <p>Article 48: It is prohibited to establish websites or communication groups used for fraud, teaching criminal methods, producing or selling prohibited or controlled items, or other illegal or criminal activities; it is prohibited to use networks to publish information involving the above illegal or criminal activities.</p>\n    <p>Article 50: Electronic information sent and application software provided must not contain malicious programs, and must not contain information that laws or administrative regulations prohibit from being published or transmitted.</p>\n    <p>Data Security Law of the People's Republic of China, Article 8: Data processing activities must not endanger national security or the public interest, or harm the lawful rights and interests of individuals or organizations.</p>\n    <p>Article 32(1): Data must be collected by lawful and proper means; data must not be stolen or otherwise unlawfully obtained.</p>\n    <p>Article 32(2): Where laws or administrative regulations specify the purpose and scope of data collection and use, data may only be collected and used within that purpose and scope.</p>\n    <p>Article 51: Those who steal or otherwise unlawfully obtain data, or thereby harm the lawful rights and interests of individuals or organizations, shall be punished in accordance with relevant laws and administrative regulations.</p>\n    <p>Personal Information Protection Law of the People's Republic of China, Article 5: Personal information must be processed lawfully, properly, necessarily, honestly, and in good faith, and must not be processed by misleading, fraudulent, coercive, or other such means.</p>\n    <p>Article 6, paragraphs 1 and 2: Personal information must be processed for a clear and reasonable purpose and in a way directly related to that purpose, using methods that have the least impact on individual rights and interests; collection must be limited to the minimum scope necessary to achieve the processing purpose, and excessive collection is prohibited.</p>\n    <p>Article 10: It is prohibited to unlawfully collect, use, process, or transmit others' personal information, and to unlawfully buy, sell, provide, or disclose others' personal information; it is prohibited to engage in personal information processing activities that endanger national security or the public interest.</p>\n    <p>Article 13: Personal information must not be processed where none of the following applies: the individual's consent has been obtained; processing is necessary for concluding or performing a contract to which the individual is a party; processing is necessary for performing statutory duties or obligations; processing is necessary for responding to public health emergencies or protecting the life, health, and property of the individual in an emergency; processing is necessary for public-interest news reporting or public opinion supervision within a reasonable scope; the personal information has already been lawfully disclosed by the individual or otherwise lawfully disclosed; or other circumstances provided by laws or administrative regulations.</p>\n    <p>Articles 28 and 29: Biometrics, medical health, financial accounts, whereabouts and movement trajectories, and personal information of minors under the age of 14 are sensitive personal information. It must not be processed without a specific purpose, sufficient necessity, and strict protection measures, and without the individual's separate consent.</p>\n    <p>In addition, other currently effective laws, administrative regulations, and regulatory provisions, as well as the terms of service and abuse policies of the model used, must also be complied with.</p>\n    <h3>5. Prohibited directions under this notice</h3>\n    <p>Unauthorized access. It is prohibited to register as a target any organization, domain, address, public network system, production service, or critical information infrastructure for which there is no written authorization, and to scan, probe, intrude into, control, or send traffic to it. Corresponds to Criminal Law Article 285(1) and (2), and Cybersecurity Law Articles 29 and 33.</p>\n    <p>Damage and malicious programs. It is prohibited to delete, modify, add to, or interfere with others' system functions or the data and application programs therein; to create or spread viruses, ransomware, or other destructive programs; or to plant malicious programs in information or software. Corresponds to Criminal Law Article 286(1) to (3), and Cybersecurity Law Article 50.</p>\n    <p>Tools and assistance. It is prohibited to provide this project or this machine to others for intrusion, illegal control, or data theft; or, while knowing that the other party is committing a cybercrime, to still provide programs, tools, technical support, advertising promotion, or payment settlement. Corresponds to Criminal Law Article 285(3) and Article 287-2, and Cybersecurity Law Article 29.</p>\n    <p>Data. It is prohibited to steal, unlawfully collect, use beyond scope, disclose, sell, or provide to others business data, accounts, passwords, and other protected data. Corresponds to Data Security Law Articles 8, 32, and 51.</p>\n    <p>Personal information. It is prohibited to unlawfully collect, use, process, transmit, buy, sell, provide, or disclose others' personal information; to over-collect; to process by misleading, fraudulent, or coercive means; or to process biometric, medical health, financial account, whereabouts, and children's personal information without authorization. Corresponds to Criminal Law Article 253-1(1) and (3); Cybersecurity Law Article 46; Personal Information Protection Law Articles 5, 6, 10, 13, 28, and 29.</p>\n    <p>Fraud and illegal information. It is prohibited to establish or use websites or groups to commit fraud, teach criminal methods, or produce or sell prohibited or controlled items; to publish such information; or to use computers to commit fraud, theft, embezzlement, misappropriation of public funds, or theft of state secrets. Corresponds to Criminal Law Article 287, Article 287-1(1)(i) to (iii), and Cybersecurity Law Article 48.</p>\n    <p>Content. It is prohibited to generate or spread content that endangers national security, honor, and interests; to incite subversion or secession; to promote terrorism, extremism, or ethnic hatred; to spread violence, obscene or pornographic content, or gambling; to fabricate or spread false information that disrupts economic and social order; to infringe on reputation, privacy, or intellectual property; or to produce content that endangers the physical and mental health of minors. Corresponds to Cybersecurity Law Article 13, paragraph 2, and Article 14.</p>\n    <p>Spread of results. Records, asset information, and files created during exercises may remain only within the targets and time limits specified in the written authorization; they must not be handed to anyone not entitled to know them, and must not be repurposed beyond the authorization.</p>\n    <h3>6. Liability rests with the user</h3>\n    <p>This project is provided \"as is\" under the MIT License. The developers make no warranty as to completeness, security, or fitness for purpose. Users bear independent and full civil, administrative, and criminal liability for their own downloading, deployment, operation, modification, and dissemination, as well as for all inputs and outputs. The author and contributors are not liable for direct, indirect, or joint liability arising from abuse.</p>\n    <p>By checking the boxes, the operator confirms on their own behalf; this cannot substitute for someone who has not read this notice, nor can it present another person's system as already authorized.</p>\n    <h3>7. Breach terminates the authorization</h3>\n    <p>Once used for illegal attacks, malicious activity, or any of the prohibited directions above, the license to use this project automatically terminates from the date of that act and is irrevocable. Use must stop immediately, and the project's code, scripts, and derived data must be destroyed, with liability borne in accordance with the law. After the authorization terminates, the drill console must not be opened or used any further.</p>\n    <h3>8. Relationship with DeepSeek</h3>\n    <p>This project is an independent open-source project and has no affiliation, commercial cooperation, authorization, or official endorsement with DeepSeek or its affiliates. The word \"official\" in this document only means that the evaluated object is the official DeepSeek Harness software package installed locally by the user; it does not mean that DeepSeek officially develops, endorses, or guarantees this plugin.</p>\n    <p>End of document. Only after the countdown ends, you scroll to here, and check all three boxes does it mean that you, as yourself, accept this notice and complete this drill console authorization.</p>";
-
-		function readWelcomeAck() {
-			try { return window.localStorage.getItem(WELCOME_KEY) === "1"; } catch { return false; }
-		}
-		function writeWelcomeAck() {
-			try { window.localStorage.setItem(WELCOME_KEY, "1"); } catch { /* ignore */ }
-		}
-
-		function readDrillAuth() {
-			if (drillGrantState.ready) return drillGrantState.granted;
-			try { return window.localStorage.getItem(AUTH_KEY) === "1"; } catch { return false; }
-		}
-		function setDrillAuthLocal(ok) {
-			try {
-				if (ok) window.localStorage.setItem(AUTH_KEY, "1");
-				else window.localStorage.removeItem(AUTH_KEY);
-			} catch { /* ignore */ }
-			drillGrantState = { ready: true, granted: !!ok };
-		}
-		function writeDrillAuth(ok) {
-			drillGrantGen += 1;
-			const gen = drillGrantGen;
-			setDrillAuthLocal(ok);
-			if (!ok) return;
-			drillGrantPosting += 1;
-			fetch("/dsh-purge/drill-grant", {
-				method: "POST",
-				headers: { "content-type": "application/json" },
-				body: "{}",
-			}).then((r) => r.json()).then((saved) => {
-				if (gen !== drillGrantGen) return;
-				setDrillAuthLocal(!!(saved && saved.granted));
-			}).catch(() => { /* 页面先记住，下次同步再写入当前安装目录 */ })
-				.finally(() => { drillGrantPosting = Math.max(0, drillGrantPosting - 1); });
-		}
-		function syncDrillGrant(attempt) {
-			const n = attempt || 0;
-			const gen = drillGrantGen;
-			/* 复位上一次调度的重试 timer,避免多次 writeDrillAuth 叠加链条 */
-			if (drillSyncRetryTimer) { try { clearTimeout(drillSyncRetryTimer); } catch { /* ignore */ } drillSyncRetryTimer = null; }
-			fetch("/dsh-purge/drill-grant", { method: "GET" })
-				.then((r) => r.json())
-				.then((r) => {
-					if (gen !== drillGrantGen) return;
-					if (!r || r.ok === false) throw new Error("grant");
-					if (r.granted) {
-						setDrillAuthLocal(true);
-						if (dockBus.authOpen) setDock({ authOpen: false });
-						return;
-					}
-					if (drillGrantPosting > 0) return;
-					setDrillAuthLocal(false);
-					if (dockBus.authOpen || dockBus.tab === "drill") {
-						setDock({ open: true, tab: "drill", authOpen: true, pending: dockBus.pending || "tab" });
-					}
-				})
-				.catch(() => {
-					if (gen !== drillGrantGen) return;
-					if (n < 5) {
-						drillSyncRetryTimer = window.setTimeout(() => {
-							drillSyncRetryTimer = null;
-							syncDrillGrant(n + 1);
-						}, 400);
-					}
-				});
-		}
-
-		let dockBus = { open: false, tab: "clean", authOpen: false, pending: "tab", listeners: new Set() };
+		let dockBus = { open: false, tab: "clean", listeners: new Set() };
 		function getDock() { return dockBus; }
 		function setDock(patch) {
 			dockBus = Object.assign({}, dockBus, patch);
@@ -7758,39 +7576,24 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 		}
 
 		function requestDrill(kind) {
-			const pending = kind || "tab";
-			const openEnv = () => {
-				try {
-					if (__dshPurgeDrill && __dshPurgeDrill.setUI) {
-						__dshPurgeDrill.setUI({ open: true, tab: "env" });
-					}
-				} catch { /* ignore */ }
-			};
-			if (readDrillAuth()) {
-				setDock({ open: true, tab: "drill", authOpen: false, pending: "tab" });
-				try { if (__dshPurgeDrill && __dshPurgeDrill.setUI) __dshPurgeDrill.setUI({ open: true }); } catch { /* ignore */ }
-				if (pending === "env") openEnv();
-				if (pending === "full") {
-					try { window.open(window.location.href.split("#")[0] + "#redteam-full", "_blank", "noopener"); } catch { /* ignore */ }
+			setDock({ open: true, tab: "drill" });
+			try {
+				if (__dshPurgeDrill && __dshPurgeDrill.setUI) {
+					__dshPurgeDrill.setUI(kind === "env" ? { open: true, tab: "env" } : { open: true });
 				}
-				return;
+			} catch { /* host may not have mounted the panel yet */ }
+			if (kind === "full") {
+				try { window.open(window.location.href.split("#")[0] + "#redteam-full", "_blank", "noopener"); } catch {}
 			}
-			/* 未授权：直接切到演练台页签并弹出授权窗（不再停在清洗页，避免像「没触发」） */
-			setDock({ open: true, tab: "drill", authOpen: true, pending: pending });
-		}
-
-		function requestDrillEnv() {
-			requestDrill("env");
 		}
 
 		function openDockClean() {
-			setDock({ open: true, tab: "clean", authOpen: false, pending: "tab" });
+			setDock({ open: true, tab: "clean" });
 		}
 		function toggleDock() {
-			if (dockBus.open) setDock({ open: false, authOpen: false, pending: "tab" });
+			if (dockBus.open) setDock({ open: false });
 			else openDockClean();
 		}
-		syncDrillGrant();
 
 		const DOCK_GEOM_KEY = "dsh-purge-dock-geom-v4";
 		/* 默认停在右上，底边留在输入框上面。拖动之后停在用户松开的位置，只保证不拖出窗口。 */
@@ -7821,180 +7624,6 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 		}
 		function saveDockGeom(g) {
 			try { window.localStorage.setItem(DOCK_GEOM_KEY, JSON.stringify(clampDockGeom(g))); } catch { /* ignore */ }
-		}
-
-		function WelcomeNotice() {
-			const t = useT();
-			const [open, setOpen] = useState(() => !readWelcomeAck());
-			const [checked, setChecked] = useState(false);
-			if (!open) return null;
-			const repo = t("welcome.repo");
-			const node = h("div", { className: "dshp-auth-mask", role: "dialog", "aria-modal": "true" },
-				h("div", { className: "dshp-auth-modal", style: { width: "min(560px,100%)" } },
-					h("h2", null, t("welcome.title")),
-					h("div", { className: "muted", style: { color: "var(--dsw-alias-label-secondary,#999)", fontSize: 12 } }, t("welcome.lead")),
-					h("div", { className: "dshp-auth-warn" }, t("welcome.warn")),
-					h("div", { className: "dshp-auth-legal", style: { height: "auto", maxHeight: 280 } },
-						h("p", null, t("welcome.body")),
-						h("p", null,
-							h("a", {
-								href: repo,
-								target: "_blank",
-								rel: "noopener noreferrer",
-								style: { color: "var(--dsw-alias-label-brand, #8fbf9a)", wordBreak: "break-all" },
-							}, repo),
-						),
-						h("h3", null, t("welcome.bans")),
-						h("p", null, t("welcome.ban1")),
-						h("p", null, t("welcome.ban2")),
-						h("p", null, t("welcome.ban3")),
-					),
-					h("div", { className: "dshp-auth-checks" },
-						h("label", null,
-							h("input", {
-								type: "checkbox",
-								checked: checked,
-								onChange: (e) => setChecked(!!(e && e.target && e.target.checked)),
-							}),
-							h("span", null, t("welcome.check")),
-						),
-					),
-					h("div", { className: "dshp-auth-ops" },
-						h("button", {
-							type: "button",
-							className: "primary",
-							disabled: !checked,
-							onClick: () => {
-								if (!checked) return;
-								writeWelcomeAck();
-								setOpen(false);
-							},
-						}, t("welcome.ok")),
-					),
-				),
-			);
-			try {
-				const rd = require("react-dom");
-				if (rd && typeof rd.createPortal === "function" && typeof document !== "undefined" && document.body) {
-					return rd.createPortal(node, document.body);
-				}
-			} catch { /* ignore */ }
-			return node;
-		}
-
-		function AuthGate(props) {
-			const t = useT();
-			const [left, setLeft] = useState(10);
-			const [readEnd, setReadEnd] = useState(false);
-			const [checks, setChecks] = useState({ read: false, scope: false, ban: false });
-			const legalRef = useRef(null);
-			useEffect(() => {
-				const id = window.setInterval(() => {
-					setLeft((n) => {
-						if (n <= 1) { window.clearInterval(id); return 0; }
-						return n - 1;
-					});
-				}, 1000);
-				return () => window.clearInterval(id);
-			}, []);
-			useEffect(() => {
-				const el = legalRef.current;
-				if (!el) return;
-				if (el.scrollHeight <= el.clientHeight + 4) setReadEnd(true);
-			}, []);
-			const locked = left > 0 || !readEnd;
-			const ready = !locked && checks.read && checks.scope && checks.ban;
-			const hint = left > 0
-				? t("auth.hint.wait").replace("{n}", String(left))
-				: (readEnd ? t("auth.hint.check") : t("auth.hint.scroll"));
-			const onScroll = () => {
-				const el = legalRef.current;
-				if (!el) return;
-				if (el.scrollTop + el.clientHeight >= el.scrollHeight - 8) setReadEnd(true);
-			};
-			const toggle = (id) => {
-				if (locked) return;
-				setChecks((prev) => Object.assign({}, prev, { [id]: !prev[id] }));
-			};
-			const okLabel = !ready
-				? t("auth.ok")
-				: (props.pending === "full"
-					? t("auth.ok.full")
-					: (props.pending === "env" ? t("auth.ok.env") : t("auth.ok.tab")));
-			return h("div", { className: "dshp-auth-mask", role: "dialog", "aria-modal": "true" },
-				h("div", { className: "dshp-auth-modal" },
-					h("h2", null, t("auth.title")),
-					h("div", { className: "muted", style: { color: "var(--dsw-alias-label-secondary,#999)", fontSize: 12 } }, t("auth.lead")),
-					h("div", { className: "dshp-auth-warn" }, t("auth.warn")),
-					h("div", {
-						className: "dshp-auth-legal",
-						ref: legalRef,
-						onScroll,
-						dangerouslySetInnerHTML: { __html: AUTH_LEGAL_HTML },
-					}),
-					h("div", { style: { color: "var(--dsw-alias-label-secondary,#999)", fontSize: 12 } }, hint),
-					h("div", { className: "dshp-auth-checks" },
-						[["read", "auth.check.read"], ["scope", "auth.check.scope"], ["ban", "auth.check.ban"]].map((row) =>
-							h("label", { key: row[0], className: locked ? "locked" : "" },
-								h("input", {
-									type: "checkbox",
-									checked: !!checks[row[0]],
-									disabled: locked,
-									onChange: () => toggle(row[0]),
-								}),
-								h("span", null, t(row[1])),
-							),
-						),
-					),
-					h("div", { className: "dshp-auth-ops" },
-						h("button", { type: "button", onClick: () => setDock({ authOpen: false, tab: "clean", pending: "tab" }) }, t("auth.no")),
-						h("button", {
-							type: "button",
-							className: "primary",
-							disabled: !ready,
-							onClick: () => {
-								if (!ready) return;
-								writeDrillAuth(true);
-								const kind = props.pending || "tab";
-								setDock({ authOpen: false, open: true, tab: "drill", pending: "tab" });
-								try { if (__dshPurgeDrill && __dshPurgeDrill.setUI) __dshPurgeDrill.setUI({ open: true }); } catch { /* ignore */ }
-								if (kind === "env") {
-									try { if (__dshPurgeDrill && __dshPurgeDrill.setUI) __dshPurgeDrill.setUI({ open: true, tab: "env" }); } catch { /* ignore */ }
-								}
-								if (kind === "full") {
-									try { window.open(window.location.href.split("#")[0] + "#redteam-full", "_blank", "noopener"); } catch { /* ignore */ }
-								}
-							},
-						}, okLabel),
-					),
-				),
-			);
-		}
-
-		function isRedteamPresetId(value) {
-			const text = String(value || "").trim();
-			if (!text) return false;
-			if (text === "redteam") return true;
-			if (/^red[\s_-]*team$/i.test(text)) return true;
-			const label = text.replace(/不是红队/g, "").replace(/非红队/g, "");
-			if (/红队/.test(label)) return true;
-			return false;
-		}
-
-		function readSessionAgentPreset(sess) {
-			if (!sess || typeof sess !== "object") return "";
-			try {
-				const pv = sess.projectionValues;
-				if (pv && typeof pv.agentPreset === "string") return pv.agentPreset;
-			} catch { /* ignore */ }
-			try {
-				if (typeof sess.agentPreset === "string") return sess.agentPreset;
-			} catch { /* ignore */ }
-			try {
-				const header = sess.header;
-				if (header && typeof header.agentPreset === "string") return header.agentPreset;
-			} catch { /* ignore */ }
-			return "";
 		}
 
 		function readSessionCwd(sess) {
@@ -8034,289 +7663,6 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 				} catch { /* ignore */ }
 			} catch { /* ignore */ }
 			return "";
-		}
-
-		function isRedteamModeActive() {
-			try {
-				const sessions = rewindSessions || (rewindHost && rewindHost.sessions);
-				const sid = currentSessionId(sessions);
-				if (sid && sessions) {
-					try {
-						const snap = typeof sessions.list?.getSnapshot === "function" ? sessions.list.getSnapshot() : null;
-						const sess = snap && snap.byId ? snap.byId[sid] : null;
-						if (isRedteamPresetId(readSessionAgentPreset(sess))) return true;
-					} catch { /* ignore */ }
-					try {
-						const actx = typeof sessions.scope === "function" ? sessions.scope(sid) : undefined;
-						const face = typeof sessions.sessionOf === "function" ? sessions.sessionOf(actx) : undefined;
-						const faceSnap = face && typeof face.getSnapshot === "function" ? face.getSnapshot() : face;
-						if (isRedteamPresetId(readSessionAgentPreset(faceSnap))) return true;
-					} catch { /* ignore */ }
-				}
-			} catch { /* ignore */ }
-			/* 新会话：模式下拉里的「红队模式」chip（选好但还没写入 session）
-			 * 优先走语义化 data-* 挂点,其次 class 子串模糊匹配 + 文本兜底;
-			 * 不写死 CSS Module 哈希(HKgFRW_seat 这种每次构建都会变)。 */
-			try {
-				const semantic = document.querySelector(
-					"[data-agent-preset='redteam'], [data-preset-id='redteam'], [data-mode='redteam']"
-				);
-				if (semantic) return true;
-				const nodes = document.querySelectorAll(
-					"[class*='seat' i][class*='label' i], [class*='seatLabel' i], button[class*='seat' i], [role='button'][class*='seat' i]"
-				);
-				for (const el of nodes) {
-					const text = String(el.textContent || "").replace(/\s+/g, " ").trim();
-					if (/红队模式/.test(text) || /^RedTeam\b/i.test(text)) return true;
-				}
-			} catch { /* ignore */ }
-			try {
-				/* Match the mode label in either language; the Chinese title is rebuilt from
-				 * code points so this file does not hardcode CJK literals. */
-				const zhRedTeamLabel = String.fromCharCode(0x7ea2, 0x961f);
-				const labels = document.querySelectorAll(
-					"[class*='label' i][class*='preset' i], [class*='presetLabel' i], [title*='" + zhRedTeamLabel + "'], [title*='Red team' i], [title*='RedTeam' i]"
-				);
-				for (const el of labels) {
-					const text = String(el.textContent || "").trim();
-					if (/红队模式/.test(text) || /^RedTeam\b/i.test(text)) return true;
-					if (isRedteamPresetId(text)) return true;
-				}
-			} catch { /* ignore */ }
-			return false;
-		}
-
-		function looksLikeSendControl(el) {
-			if (!el || el.nodeType !== 1) return false;
-			const btn = el.closest("button, [role='button']");
-			if (!btn) return false;
-			if (btn.closest(".dshp-dock, .dshp-auth-mask, .rt-dock, .dshp-env-gate")) return false;
-			const label = [
-				btn.getAttribute("aria-label"),
-				btn.getAttribute("title"),
-				btn.getAttribute("data-testid"),
-				btn.textContent,
-			].filter(Boolean).join(" ");
-			if (/停止|Stop/i.test(label) && !/发送|Send/i.test(label)) return false;
-			if (/发送|Submit|Send(?!\s*feedback)/i.test(label)) return true;
-			/* composer 主按钮：data-composer-card 内的 primary */
-			try {
-				const card = btn.closest("[data-composer-card], [data-composer-seat]");
-				if (card) {
-					const cls = String(btn.className || "");
-					if (/primary/i.test(cls) && btn.querySelector("svg")) return true;
-				}
-			} catch { /* ignore */ }
-			if (btn.type === "submit") {
-				const form = btn.closest("form");
-				if (form && form.querySelector("textarea, [contenteditable='true']")) return true;
-			}
-			return false;
-		}
-
-		function fetchEnvAdaptStatus() {
-			return fetch("/redteam/api", {
-				method: "POST",
-				headers: { "content-type": "application/json" },
-				body: JSON.stringify({ op: "platformEnvAdaptStatus" }),
-			}).then((r) => r.json()).catch(() => null);
-		}
-
-		/** 同步探测的占位：不再做同步 XHR（会卡 UI 主线程、Chrome 已逐步弃用）。
-		 * 调用方 mustBlockSubmit 在 cache 过期/缺失时按"未知→保守 block"处理,
-		 * 同时 EnvAdaptSendGate 的 useEffect 轮询会异步 refresh,下次调用即可放行。 */
-		function fetchEnvAdaptStatusSync() { return null; }
-
-		/** 红队发送前门禁：未就绪 → 授权并打开环境适配；可确认跳过。 */
-		function EnvAdaptSendGate() {
-			const t = useT();
-			const [open, setOpen] = useState(false);
-			const [confirmSkip, setConfirmSkip] = useState(false);
-			const [status, setStatus] = useState(null);
-			const [busy, setBusy] = useState(false);
-			const cacheRef = useRef({ at: 0, ready: false });
-			const openRef = useRef(false);
-			openRef.current = open;
-
-			const refresh = useCallback(async () => {
-				const r = await fetchEnvAdaptStatus();
-				const ready = !!(r && r.ready);
-				cacheRef.current = { at: Date.now(), ready: ready, skipped: !!(r && r.skipped) };
-				setStatus(r);
-				return r;
-			}, []);
-
-			const blockAndOpen = useCallback(() => {
-				setConfirmSkip(false);
-				refresh();
-				/* 第一次：只走完整授权窗 → 授权后进环境适配页 */
-				if (!readDrillAuth()) {
-					setOpen(false);
-					requestDrillEnv();
-					return true;
-				}
-				/* 已授权过：只弹精简环境适配窗，不再自动拉开整块演练台 */
-				setOpen(true);
-				return true;
-			}, [refresh]);
-
-			const mustBlockSubmit = useCallback(() => {
-				if (!isRedteamModeActive()) return false;
-				const cached = cacheRef.current;
-				/* cache 过期时触发异步刷新;本次调用按最后一次 cache 判断,未知保守 block */
-				if (!cached.at || Date.now() - cached.at > 2500) {
-					refresh().catch(() => {});
-				}
-				if (cached.ready) return false;
-				blockAndOpen();
-				return true;
-			}, [blockAndOpen, refresh]);
-
-			/* 挂住宿主 SessionInputShell.submit —— 比点按钮启发式可靠。
-			 * patch 必须可逆:存 origSubmit 到 WeakMap,unmount / 依赖变更时恢复,
-			 * 否则插件禁用后 shell.submit 还是我们的 wrapper,持死 mustBlockSubmit 闭包。 */
-			useEffect(() => {
-				const patched = new WeakMap();
-				const patchedShells = [];
-				const patchShell = (shell) => {
-					if (!shell || patched.has(shell)) return;
-					if (typeof shell.submit !== "function") return;
-					const origSubmit = shell.submit;
-					patched.set(shell, { origSubmit });
-					patchedShells.push(shell);
-					const bound = origSubmit.bind(shell);
-					shell.submit = function gatedSubmit(mode) {
-						try {
-							if (mustBlockSubmit()) return;
-						} catch { /* 门禁异常时不吞掉发送 */ }
-						return bound(mode);
-					};
-				};
-				const tick = () => {
-					try {
-						const sessions = rewindSessions || (rewindHost && rewindHost.sessions);
-						const sid = currentSessionId(sessions);
-						if (!sid) return;
-						patchShell(conversationInput(sid));
-					} catch { /* ignore */ }
-				};
-				tick();
-				const iv = window.setInterval(tick, 400);
-				return () => {
-					window.clearInterval(iv);
-					for (const shell of patchedShells) {
-						const info = patched.get(shell);
-						if (!info) continue;
-						try { shell.submit = info.origSubmit; } catch { /* ignore */ }
-					}
-					patchedShells.length = 0;
-				};
-			}, [mustBlockSubmit]);
-
-			useEffect(() => {
-				let alive = true;
-				const tick = () => {
-					if (!alive) return;
-					if (!isRedteamModeActive()) return;
-					refresh();
-				};
-				tick();
-				const iv = window.setInterval(tick, 5000);
-				return () => { alive = false; window.clearInterval(iv); };
-			}, [refresh]);
-
-			useEffect(() => {
-				const onPointer = (e) => {
-					if (!looksLikeSendControl(e.target)) return;
-					if (!mustBlockSubmit()) return;
-					e.preventDefault();
-					e.stopPropagation();
-					if (typeof e.stopImmediatePropagation === "function") e.stopImmediatePropagation();
-				};
-				const onKey = (e) => {
-					if (e.key !== "Enter" || e.shiftKey || e.isComposing) return;
-					const inComposer = e.target && e.target.closest
-						&& e.target.closest("[data-composer-card], [data-composer-seat], [contenteditable='true'], textarea");
-					if (!inComposer) return;
-					if (e.target.closest && e.target.closest(".dshp-dock, .dshp-auth-mask, .rt-dock, .dshp-env-gate")) return;
-					if (!mustBlockSubmit()) return;
-					e.preventDefault();
-					e.stopPropagation();
-					if (typeof e.stopImmediatePropagation === "function") e.stopImmediatePropagation();
-				};
-				document.addEventListener("pointerdown", onPointer, true);
-				document.addEventListener("click", onPointer, true);
-				document.addEventListener("keydown", onKey, true);
-				return () => {
-					document.removeEventListener("pointerdown", onPointer, true);
-					document.removeEventListener("click", onPointer, true);
-					document.removeEventListener("keydown", onKey, true);
-				};
-			}, [mustBlockSubmit]);
-
-			if (!open) return null;
-
-			const message = (status && status.message) || t("envGate.lead");
-			return h("div", { className: "dshp-auth-mask dshp-env-gate", role: "dialog", "aria-modal": "true" },
-				h("div", { className: "dshp-auth-modal", style: { width: "min(480px,100%)" } },
-					h("h2", null, t("envGate.title")),
-					h("div", { style: { fontSize: 13, lineHeight: 1.55 } }, message),
-					h("div", { style: { fontSize: 12, color: "var(--dsw-alias-label-secondary,#999)", lineHeight: 1.5 } }, t("envGate.kaliHint")),
-					confirmSkip
-						? h("div", { className: "dshp-auth-warn" }, t("envGate.skipConfirm"))
-						: null,
-					h("div", { className: "dshp-auth-ops" },
-						confirmSkip
-							? [
-								h("button", {
-									key: "no",
-									type: "button",
-									onClick: () => setConfirmSkip(false),
-								}, t("envGate.skipNo")),
-								h("button", {
-									key: "yes",
-									type: "button",
-									className: "primary",
-									disabled: busy,
-									onClick: () => {
-										setBusy(true);
-										fetch("/redteam/api", {
-											method: "POST",
-											headers: { "content-type": "application/json" },
-											body: JSON.stringify({ op: "platformEnvAdaptSkip", skip: true }),
-										}).then((r) => r.json()).then((r) => {
-											setBusy(false);
-											cacheRef.current = { at: Date.now(), ready: true, skipped: true };
-											setStatus(r);
-											setOpen(false);
-											setConfirmSkip(false);
-										}).catch(() => {
-											setBusy(false);
-											cacheRef.current = { at: Date.now(), ready: true, skipped: true };
-											setOpen(false);
-										});
-									},
-								}, t("envGate.skipYes")),
-							]
-							: [
-								h("button", {
-									key: "skip",
-									type: "button",
-									onClick: () => setConfirmSkip(true),
-								}, t("envGate.skip")),
-								h("button", {
-									key: "go",
-									type: "button",
-									className: "primary",
-									onClick: () => {
-										setOpen(false);
-										requestDrillEnv();
-									},
-								}, t("envGate.go")),
-							],
-					),
-				),
-			);
 		}
 
 		function PurgeDock() {
@@ -8363,13 +7709,13 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 				return () => window.removeEventListener("resize", onResize);
 			}, []);
 			useEffect(() => {
-				if (st.tab === "drill" && readDrillAuth() && __dshPurgeDrill && __dshPurgeDrill.setUI) {
+				if (st.tab === "drill" && __dshPurgeDrill && __dshPurgeDrill.setUI) {
 					try { __dshPurgeDrill.setUI({ open: true }); } catch { /* ignore */ }
 				}
 			}, [st.tab, st.open]);
 			const onTab = (id) => {
 				if (id === "drill") { requestDrill("tab"); return; }
-				setDock({ tab: "clean", authOpen: false, pending: "tab" });
+				setDock({ tab: "clean" });
 			};
 			const startDrag = (e) => {
 				if (e.button !== 0) return;
@@ -8451,9 +7797,9 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 			};
 			const body = st.tab === "clean"
 				? h(SettingsRoot, { t })
-				: (readDrillAuth() && __dshPurgeDrill.Panel
+				: (__dshPurgeDrill.Panel
 					? h(__dshPurgeDrill.Panel, { embedded: true })
-					: h("div", { style: { padding: 16, color: "var(--dsw-alias-label-secondary)" } }, t("dock.unauthorized")));
+					: h("div", { style: { padding: 16, color: "var(--dsw-alias-label-secondary)" } }, t("dock.drill")));
 			const panel = h("div", {
 				className: "dshp-dock",
 				"data-theme": dockTheme === "white" ? "white" : "dusk",
@@ -8470,10 +7816,10 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 				h("div", { className: "dshp-dock-head", onMouseDown: startDrag, title: "Drag to move the panel" },
 					h("b", null, "dsh-purge"),
 					h("span", { style: { flex: 1 } }),
-					st.tab === "drill" && readDrillAuth()
+					st.tab === "drill"
 						? h("button", { type: "button", onClick: () => requestDrill("full") }, t("dock.full"))
 						: null,
-					h("button", { type: "button", onClick: () => setDock({ open: false, authOpen: false, tab: "clean", pending: "tab" }) }, t("dock.close")),
+					h("button", { type: "button", onClick: () => setDock({ open: false, tab: "clean" }) }, t("dock.close")),
 				),
 				h("div", { className: "dshp-dock-tabs", role: "tablist" },
 					h("button", {
@@ -8489,7 +7835,7 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 						role: "tab",
 						"aria-selected": st.tab === "drill" ? "true" : "false",
 						onClick: () => onTab("drill"),
-					}, t("dock.drill") + (readDrillAuth() ? "" : " · " + t("dock.unauthorized"))),
+					}, t("dock.drill")),
 				),
 				h("div", { className: "dshp-dock-body" }, body),
 				h("div", { className: "dshp-dock-resize-l", title: "Drag to resize width", onMouseDown: startResizeLeft }),
@@ -8498,18 +7844,14 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 				h("div", { className: "dshp-dock-resize", title: "Drag to resize", onMouseDown: startResize }),
 			);
 			let portal = null;
-			let authPortal = null;
-			const authNode = st.authOpen ? h(AuthGate, { pending: st.pending }) : null;
 			try {
 				const rd = require("react-dom");
 				if (rd && typeof rd.createPortal === "function" && typeof document !== "undefined" && document.body) {
 					portal = rd.createPortal(panel, document.body);
-					if (authNode) authPortal = rd.createPortal(authNode, document.body);
 				}
 			} catch { /* host 可能没暴露 react-dom */ }
 			return h(react.Fragment, null,
 				portal || panel,
-				authPortal || authNode,
 			);
 		}
 
@@ -8760,7 +8102,7 @@ body[data-ds-dark-theme] .dshp-rewind-item span{color:var(--dsw-alias-label-tert
 				name: "shell.overlay",
 				id: "dsh-purge-dock",
 				order: 50,
-			}, () => h(react.Fragment, null, h(WelcomeNotice), h(PurgeLauncher), h(PurgeDock), h(HeroNewSessionMount), h(TabRowPurgeMount), h(EnvAdaptSendGate))));
+			}, () => h(react.Fragment, null, h(PurgeLauncher), h(PurgeDock), h(HeroNewSessionMount), h(TabRowPurgeMount))));
 			try {
 				if (typeof ctx.inject === "function") {
 					ctx.inject(["sessions", "uiWorkspace", "workspaces", "conversation"], (host) => installRewindUi(host));

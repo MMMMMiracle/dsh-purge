@@ -11,8 +11,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/YuJunZhiXue/dsh-purge/stargazers"><img src="https://img.shields.io/github/stars/YuJunZhiXue/dsh-purge?logo=github&label=Stars" alt="GitHub stars"></a>
-  <a href="https://github.com/YuJunZhiXue/dsh-purge/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue?style=flat" alt="Apache-2.0"></a>
+  <a href="https://github.com/MMMMMiracle/dsh-purge/stargazers"><img src="https://img.shields.io/github/stars/MMMMMiracle/dsh-purge?logo=github&label=Stars" alt="GitHub stars"></a>
+  <a href="https://github.com/MMMMMiracle/dsh-purge/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue?style=flat" alt="Apache-2.0"></a>
   <a href="https://awesome-dsh-plugin.com"><img src="https://awesome-dsh-plugin.com/badge.svg" alt="awesome · DSH plugin"></a>
   <a href="https://deepseek.stream/plugins/dsh-purge"><img src="https://img.shields.io/badge/Hub-dsh--purge-1a73e8" alt="DeepSeek Harness Hub"></a>
   <a href="https://www.deepseek.com/harness/"><img src="https://img.shields.io/badge/dsh-0.2.0--rc.2%20%2F%200.2.1--rc.2-blue" alt="DSH"></a>
@@ -29,7 +29,13 @@
   <a href="README.md">English</a> | <a href="README.zh-CN.md">中文</a>
 </p>
 
+This fork is maintained at [MMMMMiracle/dsh-purge](https://github.com/MMMMMiracle/dsh-purge), based on [YuJunZhiXue/dsh-purge](https://github.com/YuJunZhiXue/dsh-purge). Installation, version checks, Git updates, and archive downloads use this fork; an unavailable fork update does not switch to the upstream repository.
+
+This fork removes the plugin's keyword and public-IP session gates, the welcome and Drill confirmation dialogs, the environment setup send gate, and the red-team bootstrap token cap. Saved prompt edits take precedence over the bundled default and survive restart and Apply. Environment checks remain available as diagnostics. The skill library and knowledge base remain excluded from this distribution.
+
 ## A note from the author
+
+The upstream author's statement below is retained for attribution and context. Its description of technical gates refers to the upstream build; this fork's current behavior is described above and under Usage.
 
 People have been selling this open-source work in the open. After that, the author was asked to come in and talk. No need to spell out the rest. Read between the lines.
 
@@ -65,11 +71,11 @@ Harness does more than forward a prompt. It rewrites prompts, approval gates, sa
 |---|---|
 | **dsh-purge dock** | A button beside the session title opens the right dock. Two pages: Clean and Drill |
 | **Clean** | Grouped patch status, Apply / Restore / Uninstall, prompt editor, multiple rule sets |
-| **Drill** | Built into the stable release. After authorization: assets and the local environment. This build does not ship skills or the knowledge base. Local lab only |
+| **Drill** | Assets and environment tools open directly. Environment setup is optional. This build does not ship skills or the knowledge base |
 | **Host policy** | Default copy, permission policy, and tool limits. Official capabilities stay. No second invented identity |
 | **On start** | Checks and reapplies. After npm overwrites `node_modules`, you do not hand-edit files |
 
-No hardcoded drive letters. It looks at `$DSH_HOME`, `.dsh` next to the dsh launcher, then `~/.dsh`. It does not patch the Harness source tree. **Apply** on the **Clean** page of **dsh-purge** is what writes the changes. Identity comes from the encrypted prompt shipped in the plugin, the text the prompt box shows by default. The host prompt file is not read.
+No hardcoded drive letters. It looks at `$DSH_HOME`, `.dsh` next to the dsh launcher, then `~/.dsh`. It does not patch the Harness source tree. **Apply** on the **Clean** page of **dsh-purge** is what writes the changes. The saved `$DSH_HOME/prompt-inject.md` takes precedence, followed by selected workspace rules and then the bundled default. Restart and Apply preserve user edits; restoring the default is an explicit action.
 
 It only touches the official `@deepseek-ai` packages and local config on the user's machine. It is not a public scanner and not an attack kit for third-party sites. The repo does not ship malware, unauthorized-exploit scripts, or payloads aimed at the public internet.
 
@@ -90,6 +96,8 @@ Hiding the source, passing it off as your own, or reselling the original will be
 This repo is [Apache License 2.0](./LICENSE). Forks and redistributions must keep the copyright notice and [NOTICE](./NOTICE), and name [YuJunZhiXue/dsh-purge](https://github.com/YuJunZhiXue/dsh-purge). The original may not be resold.
 
 ---
+
+The upstream legal statement below is preserved verbatim. References there to upstream technical restrictions do not describe this fork's enforcement behavior.
 
 <a id="strict-legal--compliance-disclaimer"></a>
 
@@ -147,15 +155,15 @@ Web and the official desktop EXE are the two maintained hosts. Install and patch
 
 | What you run | Profile | Command |
 |---|---|---|
-| Official `dsh web` | `web` | `dsh plugin --profile web add https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz` |
-| Official desktop EXE | `desktop` | `dsh plugin --profile desktop add https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz` |
+| Official `dsh web` | `web` | `dsh plugin --profile web add https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz` |
+| Official desktop EXE | `desktop` | `dsh plugin --profile desktop add https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz` |
 
 If this directory is already a clone, use `add .` instead of the URL. If `dsh` is not on PATH, use [Manual install](#manual). There is no npm package; do not `pnpm add dsh-purge`.
 
 For the desktop client you can also click the button (`dsh://` deep link):
 
 <p align="center">
-  <a href="dsh://plugin/install?id=dsh-purge&name=dsh-purge&version=1.1.74&repo=YuJunZhiXue%2Fdsh-purge&permissions=%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%B3%A8%E5%85%A5%2C%E6%9C%AC%E6%9C%BA%E8%A1%A5%E4%B8%81%2C%E8%AE%BE%E7%BD%AE%E9%A1%B5&downloadUrl=https%3A%2F%2Fgithub.com%2FYuJunZhiXue%2Fdsh-purge%2Farchive%2Frefs%2Fheads%2Fmaster.tar.gz"><strong>Install in desktop client</strong></a>
+  <a href="dsh://plugin/install?id=dsh-purge&name=dsh-purge&version=1.1.74&repo=MMMMMiracle%2Fdsh-purge&permissions=%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%B3%A8%E5%85%A5%2C%E6%9C%AC%E6%9C%BA%E8%A1%A5%E4%B8%81%2C%E8%AE%BE%E7%BD%AE%E9%A1%B5&downloadUrl=https%3A%2F%2Fgithub.com%2FMMMMMiracle%2Fdsh-purge%2Farchive%2Frefs%2Fheads%2Fmaster.tar.gz"><strong>Install in desktop client</strong></a>
 </p>
 
 ### After the command: three steps
@@ -190,7 +198,7 @@ Install the DeepSeek Harness plugin `dsh-purge` into the Web profile only. Do no
 If `dsh` is not on PATH, tell the user and stop.
 
 ```sh
-dsh plugin --profile web add https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz
+dsh plugin --profile web add https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz
 ```
 
 If this directory is already a clone, use `dsh plugin --profile web add .`. There is no npm package; do not `pnpm add dsh-purge`.
@@ -230,10 +238,10 @@ $cands | Select-Object -Unique | Where-Object { $_ -and (Test-Path (Join-Path $_
 **2. Put the plugin at `$DSH_HOME/plugins/dsh-purge`** (folder must be named `dsh-purge`, with a `package.json` whose `"name"` is `dsh-purge`).
 
 ```sh
-git clone https://github.com/YuJunZhiXue/dsh-purge.git "$DSH_HOME/plugins/dsh-purge"
+git clone https://github.com/MMMMMiracle/dsh-purge.git "$DSH_HOME/plugins/dsh-purge"
 ```
 
-Without git: download [master.tar.gz](https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz), extract, rename `dsh-purge-master` → `dsh-purge`, and place it under `plugins`. If you already have a clone, copy the whole tree — not a few `.js` files.
+Without git: download [master.tar.gz](https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz), extract, rename `dsh-purge-master` → `dsh-purge`, and place it under `plugins`. If you already have a clone, copy the whole tree — not a few `.js` files.
 
 **3. Edit only that profile's `package.json` — back it up first.** Web → `$DSH_HOME/profiles/web/package.json`; desktop → `$DSH_HOME/profiles/desktop/package.json`. Add **only two things**, keeping every existing dependency and bundle:
 
@@ -307,15 +315,12 @@ Plugin config lives in `cordis.patch.yml` (`postPrompt` is empty by default):
 
 **dsh-purge** sits beside the session title. It opens a right-hand dock with two pages: **Clean** and **Drill**. Switch **Light / Ink**. Patches are grouped; the count only includes items that actually applied. Rule sets sit in a list above the editor, with Enable and Delete on each row.
 
-The first time you open Drill you read the notice, wait out the countdown, scroll to the end, and check three boxes. Clean does not need that step. Drill is only for a host you manage, an offline target, or an exercise that already has written authorization.
+Drill opens directly without an authorization countdown or mandatory checkboxes. The environment page remains available for configuration and diagnostics, and incomplete setup does not block sending a message. The upstream notices and license remain in the repository.
 
 **Clean**
 
 ![Clean](docs/preview/dock-clean.png)
 
-**Drill authorization**
-
-![Drill authorization](docs/preview/dock-auth.png)
 
 **Drill**
 
@@ -325,18 +330,14 @@ The first time you open Drill you read the notice, wait out the countdown, scrol
 
 ![Patches](docs/preview/settings.png)
 
-**Local lab**
-
-The open-source build only allows localhost/private nets. The Clean page says so. You cannot register a public host.
 
 | Area | What it shows |
 |---|---|
 | dsh-purge | button beside the session title; opens or collapses the dock |
 | Clean | patches, prompt, rule sets |
-| Drill | assets and environment after authorization. This build does not ship skills or the knowledge base. The tab says Unauthorized until then |
+| Drill | assets and environment, with direct access; this build does not ship skills or the knowledge base |
 | Patches | grouped status, Apply, Restore, or Uninstall |
 | Prompt | edit `prompt-inject.md` as the session override |
-| Local lab | loopback / RFC1918 only; names are resolved, and every address must be private |
 | Rule sets | multiple `AGENTS.md` / `CLAUDE.md`; Enable writes under `$DSH_HOME`, Delete removes the row |
 
 ---
@@ -366,6 +367,8 @@ purge_status   purge_apply   purge_revert
 ```
 
 After a successful Apply, the host restarts so patched packages load; you can also click **Restart** manually. Under the patch title are the stable release and the test release. The test release follows the `beta` branch. **Switch to stable** installs `master` and clears any pin. Picking an older stable version pins it; click **Update** to return to the latest. Old test tags are not listed.
+
+All update channels and package metadata come from [this fork](https://github.com/MMMMMiracle/dsh-purge). Git fetches the fork directly, even if a local `origin` points elsewhere; ZIP fallback downloads from the same fork. Missing branches, tags, or network failures never select an upstream version. The beta channel is available only if this fork has a `beta` branch.
 
 The composer **Undo once** and **Undo last round** stay in the current conversation and do not open a branch. The sent line goes back into the input, and that cut's already-sent messages and completed tasks leave the current conversation; edit and **send again**. From **1.1.61**, rewind bounds follow the **current turn**, not the first user message. `/rewind` does the same.
 
@@ -397,9 +400,11 @@ For routine tasks, you can also opt into Low reasoning for new sessions:
 
 Restart `dsh web` to load the profile. The model and reasoning defaults apply to newly created sessions; select Low in the composer for an existing session. The plugin does not change these model preferences automatically. Keep High when the task needs deeper reasoning, and narrow file searches rather than recursively scanning every application directory.
 
-### Local lab
+### Prompt and runtime behavior
 
-Attack tasks are denied by default. The open-source build only allows loopback and RFC1918 IPs. Names are resolved first; a `.lab` / `.htb` suffix is not enough. A hosts entry that points a lab name at a public IP is blocked. Saying “this is my server” in chat does not allow it.
+The plugin no longer rejects a session based on content keywords or whether a target resolves to a public IP. Drill does not require a separate grant, environment readiness does not block the next message, and the red-team preset does not impose an extra bootstrap token cap. Host/model limits and tool availability still apply.
+
+Edit and save the prompt in Clean to use your own text. The checked-in default source is `lib/default-prompt-source.md`; `npm run embed-prompt` builds its encrypted runtime slot, and `npm run build:client` builds the client. An optional local `lib/default-prompt-inject.md` overrides the build input. An unchanged source produces an unchanged slot.
 
 ---
 
@@ -415,6 +420,7 @@ node --check lib/host.js
 node --check lib/rewind.js
 node --check lib/skills.js
 node --check client.js
+npm test
 ```
 
 ---
@@ -430,14 +436,14 @@ flowchart TD
   B -->|no| D["Back up the original as .dshpurge.bak"]
   D --> E["Replace the matched files"]
   E --> F["Override the shim"]
-  F --> G["Inject the encrypted prompt shipped in the plugin, the text the prompt box shows by default"]
+  F --> G["Preserve user prompt edits; seed the bundled default only when needed"]
 ```
 
 Override on each session:
 
 ```mermaid
 flowchart TD
-  A["Restart or new session"] --> B["Inject the plugin's encrypted default. No save click, and no host prompt file"]
+  A["Restart or new session"] --> B["Read saved user prompt, then selected workspace rules, then bundled default"]
 ```
 
 Prompt injection and ruleset decision at every turn. The three inputs on the left are what you control in the dsh-purge panel; the dotted edges show which decision each one drives:
@@ -448,7 +454,7 @@ flowchart TD
   W["Local rules: check AGENTS.md / CLAUDE.md in the current dir"]
   P["Workspace policy: strict / fallback / always"]
 
-  A["Turn start"] --> B{"prompt-inject.md non-empty?"}
+  A["Turn start"] --> B{"Saved user override non-empty?"}
   B -->|yes| C["Inject = prompt-inject.md (A)"]
   B -->|no| D{"Any checked local md in the current dir, non-empty?"}
   D -->|yes| E["Inject = selected workspace md (B)"]
@@ -512,7 +518,7 @@ The author's personal channel: [t.me/LLM_PoJia](https://t.me/LLM_PoJia). Notes a
 - Scope is rendered copy, defaults, and runtime logic inside local `@deepseek-ai/*` packages, plus override files and rule sets under the harness home.
 - After an upgrade, unmatched originals show as skipped. Apply still completes, and those files are left unchanged.
 - Third-party plugin *source repos* outside `@deepseek-ai` are left alone (CMD silence may **best-effort** patch installed doctor / market / liangshen / mnemon at runtime).
-- Install from the GitHub archive (there is no npm package): `dsh plugin --profile web add https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz` (use profile `desktop` for the EXE). From this repo, `add .`.
+- Install from the GitHub archive (there is no npm package): `dsh plugin --profile web add https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz` (use profile `desktop` for the EXE). From this repo, `add .`.
 
 ---
 

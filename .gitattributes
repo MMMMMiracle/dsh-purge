@@ -1,0 +1,2 @@
+# Preserve the released prompt bytes across platforms.
+lib/default-prompt-source.md -text whitespace=cr-at-eol,-blank-at-eol

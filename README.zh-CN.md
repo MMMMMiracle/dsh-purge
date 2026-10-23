@@ -11,8 +11,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/YuJunZhiXue/dsh-purge/stargazers"><img src="https://img.shields.io/github/stars/YuJunZhiXue/dsh-purge?logo=github&label=Stars" alt="GitHub stars"></a>
-  <a href="https://github.com/YuJunZhiXue/dsh-purge/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue?style=flat" alt="Apache-2.0"></a>
+  <a href="https://github.com/MMMMMiracle/dsh-purge/stargazers"><img src="https://img.shields.io/github/stars/MMMMMiracle/dsh-purge?logo=github&label=Stars" alt="GitHub stars"></a>
+  <a href="https://github.com/MMMMMiracle/dsh-purge/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue?style=flat" alt="Apache-2.0"></a>
   <a href="https://awesome-dsh-plugin.com"><img src="https://awesome-dsh-plugin.com/badge.svg" alt="awesome · DSH plugin"></a>
   <a href="https://deepseek.stream/plugins/dsh-purge"><img src="https://img.shields.io/badge/Hub-dsh--purge-1a73e8" alt="DeepSeek Harness Hub"></a>
   <a href="https://www.deepseek.com/harness/"><img src="https://img.shields.io/badge/dsh-0.2.0--rc.2%20%2F%200.2.1--rc.2-blue" alt="DSH"></a>
@@ -29,7 +29,13 @@
   <a href="README.md">English</a> | <a href="README.zh-CN.md">中文</a>
 </p>
 
+本 fork 位于 [MMMMMiracle/dsh-purge](https://github.com/MMMMMiracle/dsh-purge)，基于 [YuJunZhiXue/dsh-purge](https://github.com/YuJunZhiXue/dsh-purge)。安装、版本检查、Git 更新和归档下载均使用本 fork；更新失败时不会切回上游仓库覆盖改动。
+
+本 fork 移除了插件的内容关键词与公网 IP 会话门禁、首次欢迎和演练授权确认弹窗、环境配置发送门禁，以及红队启动阶段的额外 token 上限。已保存的提示词优先于内置默认，重启和「应用」保留用户编辑。环境检查继续作为配置与诊断工具。此分发仍不附带技能库和知识库。
+
 ## 作者说几句
+
+以下保留上游作者原文及署名，其中技术门禁的描述对应上游版本；本 fork 当前行为见上文和「使用」。
 
 市面上有人把这份开源明目张胆挂出去卖。后面作者这边被找去谈过话——经过不必写，你们自己品。
 
@@ -66,12 +72,12 @@ Harness 不只是把问题交给模型。它还会在运行时改提示词、审
 | ---------------- | ----------------------------------------------- |
 | **dsh-purge 侧栏** | 会话标题旁的按钮打开右侧栏。里面两页：清洗、演练台                       |
 | **清洗**           | 分组查看补丁，应用、还原、卸载；编辑提示词和多套规则                      |
-| **演练台**          | 正式版内置。授权后查看资产和本机环境。开源版不下发技能库和知识库。只用于本机/内网本地靶场 |
+| **演练台** | 直接查看资产和环境工具，环境配置可选。此分发不附带技能库和知识库 |
 | **宿主策略**         | 调整默认文案、权限策略和工具上限。官方能力保留，不另写一套身份                 |
 | **启动时**          | 自动再检查并应用。npm 升级盖掉 `node_modules` 之后不用手改文件       |
 
 
-不写死盘符。按 `$DSH_HOME`、dsh 启动器旁边的 `.dsh`，再退回 `~/.dsh`。不改 Harness 源码仓库，在 **dsh-purge** 的「清洗」里点「应用」才写入。身份来自插件里的加密提示词，也就是提示词框默认显示的那一份。不读取宿主磁盘上的提示词文件。
+不写死盘符。按 `$DSH_HOME`、dsh 启动器旁边的 `.dsh`，再退回 `~/.dsh`。不改 Harness 源码仓库，在 **dsh-purge** 的「清洗」里点「应用」才写入。提示词优先读取已保存的 `$DSH_HOME/prompt-inject.md`，其次是已选工作区规则，最后回退到内置默认。重启和「应用」保留用户编辑；恢复默认需要显式操作。
 
 本插件只处理使用者本机已安装的官方 `@deepseek-ai` 包和本机配置。它不是公网扫描器，也不是针对第三方站点的攻击套件。仓库内不含木马、未授权渗透脚本或对外攻击载荷。
 
@@ -94,8 +100,7 @@ Harness 不只是把问题交给模型。它还会在运行时改提示词、审
 ---
 
 
-
-
+以下上游法律声明保留原文。其中涉及上游技术限制的描述，不代表本 fork 当前的门禁实现。
 
 ### ⚠️ 严正法律免责与合规使用声明
 
@@ -149,15 +154,15 @@ Harness 不只是把问题交给模型。它还会在运行时改提示词、审
 
 | 你正在用 | profile | 命令 |
 |---|---|---|
-| 官方 `dsh web` | `web` | `dsh plugin --profile web add https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz` |
-| 官方桌面 EXE | `desktop` | `dsh plugin --profile desktop add https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz` |
+| 官方 `dsh web` | `web` | `dsh plugin --profile web add https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz` |
+| 官方桌面 EXE | `desktop` | `dsh plugin --profile desktop add https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz` |
 
 当前目录已经是本仓库时，把 URL 换成 `add .`。`dsh` 不在 PATH 时走 [手动安装](#manual)。没有 npm 包，不要 `pnpm add dsh-purge`。
 
 桌面客户端也可以点按钮（`dsh://` 唤起）：
 
 <p align="center">
-  <a href="dsh://plugin/install?id=dsh-purge&name=dsh-purge&version=1.1.74&repo=YuJunZhiXue%2Fdsh-purge&permissions=%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%B3%A8%E5%85%A5%2C%E6%9C%AC%E6%9C%BA%E8%A1%A5%E4%B8%81%2C%E8%AE%BE%E7%BD%AE%E9%A1%B5&downloadUrl=https%3A%2F%2Fgithub.com%2FYuJunZhiXue%2Fdsh-purge%2Farchive%2Frefs%2Fheads%2Fmaster.tar.gz"><strong>唤起客户端一键安装</strong></a>
+  <a href="dsh://plugin/install?id=dsh-purge&name=dsh-purge&version=1.1.74&repo=MMMMMiracle%2Fdsh-purge&permissions=%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%B3%A8%E5%85%A5%2C%E6%9C%AC%E6%9C%BA%E8%A1%A5%E4%B8%81%2C%E8%AE%BE%E7%BD%AE%E9%A1%B5&downloadUrl=https%3A%2F%2Fgithub.com%2FMMMMMiracle%2Fdsh-purge%2Farchive%2Frefs%2Fheads%2Fmaster.tar.gz"><strong>唤起客户端一键安装</strong></a>
 </p>
 
 ### 装完都要做这三步
@@ -192,7 +197,7 @@ Web 的控件只动 Web，桌面端的只动桌面应用。不要在一个宿主
 `dsh` 不在 PATH 就告诉用户后停止。
 
 ```sh
-dsh plugin --profile web add https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz
+dsh plugin --profile web add https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz
 ```
 
 当前目录已是本仓库时改用 `dsh plugin --profile web add .`。没有 npm 包，不要 `pnpm add dsh-purge`。
@@ -232,10 +237,10 @@ $cands | Select-Object -Unique | Where-Object { $_ -and (Test-Path (Join-Path $_
 **2. 把插件放到 `$DSH_HOME/plugins/dsh-purge`**（目录名必须是 `dsh-purge`，其 `package.json` 里 `"name"` 也必须是 `dsh-purge`）。
 
 ```sh
-git clone https://github.com/YuJunZhiXue/dsh-purge.git "$DSH_HOME/plugins/dsh-purge"
+git clone https://github.com/MMMMMiracle/dsh-purge.git "$DSH_HOME/plugins/dsh-purge"
 ```
 
-没有 git：下载 [master.tar.gz](https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz)，解压后把 `dsh-purge-master` 改名为 `dsh-purge`，整夹放到 `plugins` 下。已有本仓库副本就复制整个目录，不要只拷几个 `.js`。
+没有 git：下载 [master.tar.gz](https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz)，解压后把 `dsh-purge-master` 改名为 `dsh-purge`，整夹放到 `plugins` 下。已有本仓库副本就复制整个目录，不要只拷几个 `.js`。
 
 **3. 只改对应 profile 的 `package.json`，先备份。** Web → `$DSH_HOME/profiles/web/package.json`；桌面 → `$DSH_HOME/profiles/desktop/package.json`。**只追加两处**，原有依赖和 bundle 全部留着：
 
@@ -309,15 +314,12 @@ dsh-purge --uninstall
 
 会话标题旁有 **dsh-purge**。点开是右侧栏，两页：**清洗** 和 **演练台**。白 / 墨可切换。补丁按组展开，进度只计真正已应用的项。规则集在上方列表启用或删除，下方编辑正文。
 
-第一次进演练台要先读声明、等倒计时、滚到文末并勾选三项。清洗不需要这一步。演练台只用于你有权管理的本机、离线靶标，或已经书面授权的演练环境。
+演练台直接打开，无授权倒计时或强制勾选。环境适配页面继续提供配置与诊断，配置未完成也不会阻止发送消息。上游声明与许可证保留在仓库中。
 
 **清洗**
 
 ![清洗](docs/preview/dock-clean.png)
 
-**演练台授权**
-
-![演练台授权](docs/preview/dock-auth.png)
 
 **演练台**
 
@@ -331,19 +333,14 @@ dsh-purge --uninstall
 
 ![规则集](docs/preview/rules.png)
 
-**本地靶场**
-
-开源版只放行本机/内网。清洗页会写明这一点，不能再登记公网服务器。
-
 
 | 区域        | 说明                                                                                                         |
 | --------- | ---------------------------------------------------------------------------------------------------------- |
 | dsh-purge | 会话标题旁的按钮，打开或收起右侧栏                                                                                          |
 | 清洗        | 补丁、提示词、规则集                                                                                                 |
-| 演练台       | 授权后的资产与环境页。开源版不下发技能库和知识库。未授权时按钮标「未授权」                                                                   |
+| 演练台 | 直接打开资产与环境页；此分发不附带技能库和知识库 |
 | 补丁        | 分组查看状态，应用、还原或卸载                                                                                            |
 | 提示词       | 编辑 `prompt-inject.md`，作为会话覆盖段                                                                              |
-| 本地靶场      | 只放行本机/私网 IP；域名先解析，全部地址都必须是私网或回环                                                         |
 | 规则集       | 多套 `AGENTS.md` / `CLAUDE.md`；启用写入 `$DSH_HOME`，删除从列表去掉                                                      |
 
 
@@ -378,6 +375,8 @@ purge_status   purge_apply   purge_revert
 
 设置页「应用」成功后会自动重启，以加载已改的包文件；也可手动点「重启」。补丁标题下有正式版和测试版。测试版跟 `beta` 分支。点「切换到正式版」会装回 master，并清掉钉选。正式版里选旧版本会固定在该版本，要回到最新再点「更新」。旧的测试标签不再列出。
 
+所有更新通道与包版本信息均来自[本 fork](https://github.com/MMMMMiracle/dsh-purge)。Git 直接拉取本 fork，即使本地 `origin` 指向其他仓库；Git 失败后的 ZIP 下载也使用同一 fork。缺少分支、标签或网络失败都不会选择上游版本。只有本 fork 存在 `beta` 分支时才提供测试通道。
+
 输入框旁的「回退一次」和「回退上一轮」都留在当前这条对话里，不另开分支。已发送的那句会回到输入框，这一轮已经发出的内容和已完成的任务会从当前对话撤掉，改字后**重新发送**即可。从 **1.1.61** 起，多轮对话后回退按**当前这一轮**定位，不会又退到第一条用户消息。聊天里 `/rewind` 同样可用。
 
 **极简 / PTC 与标准不一致时**：同一任务在标准模式能跑、在极简或 PTC 被拦，通常是 preset 里 `run_code` 或 plan 拦截句没洗净，或内置 minimal 缺少 `agent-instructions`。请升到 **1.1.61+**，**完全退出宿主 → 清洗里应用 → 自动重启 → 新开一轮对话** 再试；只换 preset 不重应用，旧进程里的补丁不会更新。
@@ -408,9 +407,13 @@ DSH 会按顺序执行同一批中的 Bash 调用。旧版 dsh-purge 把默认�
 
 重启 `dsh web` 后加载配置。模型和推理等级默认值只用于新建会话，已有会话请在输入框中选择 Low。插件不会自动修改这些模型偏好。需要深入推理的任务可保留 High；搜索文件时应限定目录，避免递归扫描所有应用目录。
 
-### 本地靶场
+### 提示词与运行行为
 
-开源版攻击任务默认全拦，只放行本机/私网 IP。域名先解析再判，不认 `.lab` / `.htb` 这类后缀本身。hosts 把实验室名指到公网 IP 也会拦。在对话里说「这是我的服务器」不会放行。
+插件不再根据内容关键词或目标是否解析到公网 IP 拒绝会话。演练台无独立授权门，环境是否就绪不阻止发送消息，红队预设不再附加启动阶段 token 上限。宿主、模型自身限制与工具可用性仍按实际环境生效。
+
+清空并保存会保留空文件；运行时仍可回退到已选工作区规则或内置默认，清空不等于关闭注入。点击「恢复默认」才重置正文归属；未编辑提示词时，「应用」不会把默认稿变成用户自定义稿。
+
+在「清洗」中编辑并保存提示词即可使用自定义文本。默认稿源文件为 `lib/default-prompt-source.md`；运行 `npm run embed-prompt` 生成加密运行槽，运行 `npm run build:client` 构建客户端。可选的本地 `lib/default-prompt-inject.md` 优先作为构建输入。源文本不变时，槽文件保持不变。
 
 ---
 
@@ -422,6 +425,7 @@ node --check lib/core.js
 node --check lib/rewind.js
 node --check lib/skills.js
 node --check client.js
+npm test
 ```
 
 ---
@@ -437,18 +441,16 @@ flowchart TD
   B -->|否| D["备份原件为 .dshpurge.bak"]
   D --> E["按补丁列表替换对应文件"]
   E --> F["覆盖 shim"]
-  F --> G["注入插件加密默认（提示词框默认显示的那份）"]
+  F --> G["保留用户提示词编辑，仅在需要时写入内置默认"]
 ```
-
 
 
 每次会话的覆盖：
 
 ```mermaid
 flowchart TD
-  A["重启或新会话"] --> B["注入插件加密默认，不必点保存，不读宿主磁盘"]
+  A["重启或新会话"] --> B["读取已保存提示词，其次已选工作区规则，最后内置默认"]
 ```
-
 
 
 每一轮的提示词注入与规则集决策。左边三个输入就是你在 dsh-purge 面板里控制的东西，虚线表示它们各自驱动哪一步判定：
@@ -459,7 +461,7 @@ flowchart TD
   W["本地规则：勾选当前目录的 AGENTS.md / CLAUDE.md"]
   P["工作区策略：strict / fallback / always"]
 
-  A["新一轮开始"] --> B{"prompt-inject.md 非空?"}
+  A["新一轮开始"] --> B{"已保存的用户自定义稿非空?"}
   B -->|是| C["注入 = prompt-inject.md (A)"]
   B -->|否| D{"当前目录有被勾选且非空的本地 md?"}
   D -->|是| E["注入 = 被勾选的 workspace md (B)"]
@@ -479,7 +481,6 @@ flowchart TD
   W -.-> D
   P -.-> G
 ```
-
 
 
 ---
@@ -521,7 +522,7 @@ flowchart TD
 - 改动范围是本机 `@deepseek-ai/*` 包里的渲染文案、默认策略和执行逻辑，以及用户目录下的覆盖文件与规则集。
 - 升级后原文对不上会显示跳过，这次应用仍算完成，不会乱改。
 - 不改动非 `@deepseek-ai` 的第三方插件源仓库（启动时的 CMD 无感会**尽力**修补已装的 doctor / market / 梁神 / mnemon，属运行时补丁）。
-- 安装走 GitHub 归档（npm 上没有这个包）：`dsh plugin --profile web add https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz`（桌面端把 profile 换成 `desktop`）。当前目录已是本仓库时 `add .`。
+- 安装走 GitHub 归档（npm 上没有这个包）：`dsh plugin --profile web add https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz`（桌面端把 profile 换成 `desktop`）。当前目录已是本仓库时 `add .`。
 
 ---
 

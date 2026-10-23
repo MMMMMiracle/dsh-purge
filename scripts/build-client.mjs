@@ -64,7 +64,7 @@ ${END}`;
 
 let client = readFileSync(clientPath, "utf8");
 if (!client.includes(BEGIN) || !client.includes(END)) {
-	throw new Error("client.js missing drill markers; run patch-client-dock.mjs first");
+	throw new Error("client.js missing drill markers; restore the maintained client.js before building");
 }
 const beginAt = client.indexOf(BEGIN);
 const endAt = client.indexOf(END);

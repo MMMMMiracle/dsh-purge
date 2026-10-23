@@ -31,9 +31,11 @@
     "README.md",
     "README.zh-CN.md",
     "LICENSE",
+    "LICENSE-COMMERCIAL.md",
     "NOTICE"
   ],
   "scripts": {
+    "test": "node --test tests/*.test.mjs scripts/update-source.test.mjs",
     "embed-prompt": "node scripts/embed-default-prompt.mjs",
     "build:client": "node scripts/build-client.mjs"
   },
@@ -55,11 +57,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YuJunZhiXue/dsh-purge.git"
+    "url": "git+https://github.com/MMMMMiracle/dsh-purge.git"
   },
-  "homepage": "https://github.com/YuJunZhiXue/dsh-purge#readme",
+  "homepage": "https://github.com/MMMMMiracle/dsh-purge#readme",
   "bugs": {
-    "url": "https://github.com/YuJunZhiXue/dsh-purge/issues"
+    "url": "https://github.com/MMMMMiracle/dsh-purge/issues"
   },
   "dsh": {
     "bundle": {
@@ -78,9 +80,9 @@
     },
     "install": {
       "preferred": "tarball",
-      "tarball": "https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.tar.gz",
-      "zip": "https://github.com/YuJunZhiXue/dsh-purge/archive/refs/heads/master.zip",
-      "git": "https://github.com/YuJunZhiXue/dsh-purge.git"
+      "tarball": "https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.tar.gz",
+      "zip": "https://github.com/MMMMMiracle/dsh-purge/archive/refs/heads/master.zip",
+      "git": "https://github.com/MMMMMiracle/dsh-purge.git"
     }
   },
   "publishConfig": {
